@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>07 - Login Form with CSRF Token</title>
+    <!--
+      A CSRF (Cross-Site Request Forgery) token is a server-generated value
+      included in forms to ensure that form submissions originate from the
+      legitimate site/user session. It prevents unauthorized sites from posting
+      on behalf of an authenticated user.
+    -->
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="#" method="post">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <!-- Hidden CSRF token (dummy value) -->
+      <input type="hidden" name="csrf_token" value="dummy_csrf_token_123456">
+
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>
