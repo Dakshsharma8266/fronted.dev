@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>19 - Form Security (Autocomplete off)</title>
+    <!--
+      This form sets autocomplete="off" to prevent browsers from auto-filling sensitive fields.
+      All fields are required.
+    -->
+  </head>
+  <body>
+    <h1>Secure Form</h1>
+    <form action="#" method="post" autocomplete="off">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" required><br><br>
+
+      <label for="secret">Secret Info:</label><br>
+      <input type="text" id="secret" name="secret" required><br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <p>
+      Note: Turning off autocomplete can improve security by preventing the browser from
+      storing or suggesting sensitive values on shared devices, reducing the risk of
+      accidental credential exposure.
+    </p>
+  </body>
+</html>
