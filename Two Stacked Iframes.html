@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>03 - Two Stacked Iframes</title>
+    <!--
+      First iframe: introduction page (embedded via srcdoc).
+      Second iframe: favorite hobby page (embedded via srcdoc).
+      Both use width/height attributes to look balanced.
+    -->
+  </head>
+  <body>
+    <h1>Two Iframes (One Below Another)</h1>
+
+    <!-- Introduction iframe -->
+    <iframe
+      srcdoc='
+        <!doctype html>
+        <html>
+          <head><title>Introduction</title></head>
+          <body><h2>Introduction</h2><p>Hello — I am Girjesh. Welcome to my introduction page.</p></body>
+        </html>'
+      title="Introduction Page"
+      width="90%"
+      height="300"
+      frameborder="1">
+    </iframe>
+
+    <br>
+
+    <!-- Favorite hobby iframe -->
+    <iframe
+      srcdoc='
+        <!doctype html>
+        <html>
+          <head><title>Hobby</title></head>
+          <body><h2>My Favorite Hobby</h2><p>I enjoy photography and travel. I capture landscapes and cityscapes.</p></body>
+        </html>'
+      title="Hobby Page"
+      width="90%"
+      height="300"
+      frameborder="1">
+    </iframe>
+
+  </body>
+</html>
