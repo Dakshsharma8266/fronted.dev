@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>04 - Frameset Layout</title>
+    <!--
+      This example uses deprecated <frameset> / <frame> elements intentionally,
+      as requested. Modern HTML5 discourages frames but they still work in some browsers.
+    -->
+  </head>
+  <!-- The frameset replaces the body when used -->
+  <frameset rows="80,*" frameborder="1">
+    <frame
+      srcdoc='
+        <!doctype html>
+        <html>
+          <head><title>Navigation</title></head>
+          <body>
+            <!-- Top frame: simple navigation links -->
+            <nav>
+              <a href="#">Home</a> |
+              <a href="#">About</a> |
+              <a href="#">Contact</a>
+            </nav>
+          </body>
+        </html>'
+      name="topFrame"
+      title="Navigation Frame">
+    <frame
+      srcdoc='
+        <!doctype html>
+        <html>
+          <head><title>Welcome</title></head>
+          <body>
+            <!-- Bottom frame: welcome message -->
+            <h1>Welcome to My Website</h1>
+            <p>This message appears in the bottom frame.</p>
+          </body>
+        </html>'
+      name="bottomFrame"
+      title="Content Frame">
+  </frameset>
+  <!-- Provide a fallback body for user agents that do not support framesets -->
+  <body>
+    <h1>Frames are not supported in this browser.</h1>
+  </body>
+</html>
