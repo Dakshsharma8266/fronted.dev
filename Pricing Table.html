@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Table</title>
+<style>
+body { font-family: 'Poppins', sans-serif; margin: 0; text-align: center; background: #f4f4f4; }
+.container { display: flex; justify-content: center; gap: 20px; padding: 60px; flex-wrap: wrap; }
+.plan {
+  background: white; padding: 20px; width: 280px;
+  border-radius: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.plan:hover { transform: scale(1.05); background: #fce4ec; }
+.popular { border: 3px solid #e91e63; }
+.price { font-size: 2em; color: #e91e63; margin: 15px 0; }
+button { background: #e91e63; color: white; border: none; padding: 10px 20px; border-radius: 5px; }
+button:hover { background: #ad1457; }
+</style>
+</head>
+<body>
+<h1>Our Pricing Plans</h1>
+<div class="container">
+  <div class="plan"><h2>Basic</h2><ul><li>5GB Storage</li><li>1 User</li></ul><div class="price">$9/mo</div><button>Choose</button></div>
+  <div class="plan popular"><h2>Standard</h2><ul><li>50GB Storage</li><li>5 Users</li></ul><div class="price">$29/mo</div><button>Choose</button></div>
+  <div class="plan"><h2>Premium</h2><ul><li>200GB Storage</li><li>Unlimited Users</li></ul><div class="price">$59/mo</div><button>Choose</button></div>
+</div>
+</body>
+</html>
