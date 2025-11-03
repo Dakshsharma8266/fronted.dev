@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+body { margin: 0; font-family: Arial, sans-serif; display: flex; }
+header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  background: #1976d2; color: white; padding: 15px; text-align: center;
+}
+.sidebar {
+  position: fixed; top: 60px; left: 0; bottom: 0;
+  width: 200px; background: #0d47a1; color: white; padding: 20px;
+}
+main {
+  margin-top: 80px; margin-left: 220px; flex: 1;
+  display: flex; flex-wrap: wrap; gap: 20px; padding: 20px;
+}
+.box {
+  background: white; flex: 1 1 45%;
+  min-height: 200px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  border-radius: 10px; padding: 20px;
+}
+@media(max-width:700px) {
+  .sidebar { position: relative; width: 100%; top: 0; }
+  main { margin: 0; }
+}
+</style>
+</head>
+<body>
+<header>Admin Dashboard</header>
+<div class="sidebar">
+  <p><b>Menu</b></p>
+  <ul>
+    <li>Overview</li>
+    <li>Reports</li>
+    <li>Settings</li>
+  </ul>
+</div>
+<main>
+  <div class="box">Content Box 1</div>
+  <div class="box">Content Box 2</div>
+</main>
+</body>
+</html>
