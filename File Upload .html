@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>09 - File Upload (jpg/png only)</title>
+  </head>
+  <body>
+    <h1>Upload Image</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <label for="image">Select image to upload:</label><br>
+      <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" required><br><br>
+
+      <p>Allowed file types: <strong>.jpg</strong>, <strong>.jpeg</strong>, and <strong>.png</strong>.</p>
+
+      <input type="submit" value="Upload">
+    </form>
+  </body>
+</html>
