@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- The <meta charset> declares the document character encoding. -->
+
+    <meta name="description" content="Example page showing head elements">
+    <!-- The <meta description> provides a summary used by search engines. -->
+
+    <meta name="author" content="Girjesh Sharma">
+    <!-- The <meta author> identifies the document author. -->
+
+    <base href="https://example.com/">
+    <!-- The <base> tag sets the base URL for all relative URLs on the page. -->
+
+    <link rel="icon" href="favicon.ico">
+    <!-- The <link rel='icon'> links to a favicon displayed by the browser. -->
+
+    <title>20 - Head Elements Overview</title>
+    <!-- The <title> defines the page title shown in the browser tab. -->
+
+    <style>
+      /* Empty <style> block is allowed in the head; here intentionally empty as requested. */
+    </style>
+
+    <script>
+      /* Empty <script> block is allowed in the head; intentionally empty as requested. */
+    </script>
+  </head>
+  <body>
+    <h1>Head Elements Demonstration</h1>
+    <p>This document shows important head elements and short comments in the source.</p>
+  </body>
+</html>
