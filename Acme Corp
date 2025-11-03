@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Acme Corp</title>
+</head>
+<body>
+  <header>
+    <h1>Acme Corporation</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About the Company</h2>
+      <p>Acme Corp provides innovative tech solutions for businesses worldwide.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services Offered</h2>
+      <ul>
+        <li>Software Development</li>
+        <li>Cloud Integration</li>
+        <li>Consulting</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside>
+    <blockquote>
+      "Our mission is to deliver value through technology." — CEO, Acme Corp
+    </blockquote>
+  </aside>
+
+  <footer>
+    <p>Contact: contact@acmecorp.example | 123 Business Park, City</p>
+  </footer>
+</body>
+</html>
