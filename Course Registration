@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Registration</title>
+</head>
+<body>
+  <header><h1>Course Registration Form</h1></header>
+
+  <main>
+    <form action="#" method="post" title="Course registration form">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Selection</legend>
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+          <option value="ds" selected>Data Structures (DS)</option>
+          <option value="web">Web Development</option>
+          <option value="ml">Machine Learning</option>
+        </select>
+      </fieldset>
+
+      <p><input type="submit" value="Register"></p>
+    </form>
+
+    <h2>Available Course Schedules</h2>
+    <table border="1" title="Course schedules">
+      <thead>
+        <tr><th>Day</th><th>Time</th><th>Instructor</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday</td><td>10:00 - 12:00</td><td>Prof. A</td></tr>
+        <tr><td>Wednesday</td><td>14:00 - 16:00</td><td>Dr. B</td></tr>
+        <tr><td>Saturday</td><td>09:00 - 12:00</td><td>Ms. C</td></tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer><p>Contact training@academy.example</p></footer>
+</body>
+</html>
