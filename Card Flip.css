@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Combined Layout</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,Arial;background:#fafafa}
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+  .logo{font-weight:800}
+  nav a{margin-left:16px;text-decoration:none;color:#333}
+  .container{max-width:1100px;margin:24px auto;padding:0 16px}
+  .main-grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+  article{background:#fff;padding:16px;border-radius:8px;display:flex;flex-direction:column;gap:12px}
+  .article-flex{display:flex;gap:12px}
+  .article-box{flex:1;padding:12px;border-radius:8px;background:#f7f9fc;display:flex;align-items:center;justify-content:center}
+  aside{background:#fff;padding:16px;border-radius:8px}
+  footer{text-align:center;padding:12px;margin-top:20px;background:#fff;border-radius:8px}
+  /* animation: title fades in from below */
+  .title{opacity:0;transform:translateY(10px);animation:fadeUp 0.7s forwards}
+  @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+  /* responsive - single column on mobile */
+  @media (max-width:800px){
+    .main-grid{grid-template-columns:1fr}
+    header{flex-direction:column;gap:8px}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">MyLogo</div>
+    <nav>
+      <a href="#">Home</a><a href="#">Blog</a><a href="#">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="main-grid">
+      <article>
+        <h1 class="title">Article Title</h1>
+        <div class="article-flex">
+          <div class="article-box">Box 1</div>
+          <div class="article-box">Box 2</div>
+          <div class="article-box">Box 3</div>
+        </div>
+        <p>Article body content. This area will collapse below 800px into a single column layout.</p>
+      </article>
+
+      <aside>
+        <h3>Sidebar</h3>
+        <p>Links, widgets, or small content blocks.</p>
+      </aside>
+    </div>
+
+    <footer>© <span id="yr4"></span> MySite — All rights reserved</footer>
+  </div>
+
+<script>document.getElementById('yr4').textContent = new Date().getFullYear();</script>
+</body>
+</html>
