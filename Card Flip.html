@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Card Flip</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:#f0f2f5;font-family:system-ui,Arial}
+  .scene{width:320px;height:420px;perspective:1000px;display:flex;align-items:center;justify-content:center}
+  .card{
+    width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .8s;
+  }
+  .card:hover{transform:rotateY(180deg)}
+  .face{
+    position:absolute;inset:0;border-radius:12px;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.08)
+  }
+  .front{background:#fff}
+  .front img{max-width:80%;border-radius:8px;margin-bottom:12px}
+  .back{background:#0b6;color:#fff;transform:rotateY(180deg)}
+</style>
+</head>
+<body>
+  <div class="scene">
+    <div class="card" role="button" tabindex="0" aria-label="Flip card">
+      <div class="face front">
+        <img src="https://via.placeholder.com/220x140.png?text=Image" alt="card image">
+        <h3>Card Title</h3>
+      </div>
+      <div class="face back">
+        <h3>About</h3>
+        <p style="max-width:80%;text-align:center">This is the back description of the card. More details live here.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
