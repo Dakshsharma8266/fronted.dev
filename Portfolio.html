@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio - Flexbox</title>
+<style>
+  :root{--gap:20px;--max:1100px;--bg:#f6f7fb;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:#111}
+  .container{max-width:var(--max);margin:0 auto;padding:20px;display:flex;flex-direction:column;gap:var(--gap)}
+  header{display:flex;align-items:center;justify-content:space-between;background:#fff;padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+  nav a{margin-left:16px;text-decoration:none;color:#333;font-weight:600}
+  main{display:flex;gap:var(--gap);align-items:center;justify-content:center;padding:20px;background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+  .about{flex:1;display:flex;align-items:center;justify-content:center}
+  .about p{max-width:48ch;text-align:left}
+  .photo{flex:1;display:flex;align-items:center;justify-content:center}
+  .photo img{max-width:100%;height:auto;border-radius:8px;object-fit:cover;max-height:320px}
+  footer{display:flex;align-items:center;justify-content:center;padding:12px;font-size:0.9rem;color:#666}
+  /* center items vertically and horizontally on small screens too */
+  @media (max-width:700px){
+    main, header{flex-direction:column;align-items:center;text-align:center}
+    nav{margin-top:8px}
+    nav a{margin:6px}
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><strong>Your Name</strong></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="about">
+        <p>Hello — I'm a frontend-focused developer who loves clean UI and performant experiences. I build accessible, responsive websites and enjoy learning new design patterns.</p>
+      </section>
+
+      <aside class="photo">
+        <img src="https://via.placeholder.com/520x320.png?text=Your+Photo" alt="Your photo">
+      </aside>
+    </main>
+
+    <footer>© <span id="yr"></span> Your Name. All rights reserved.</footer>
+  </div>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
