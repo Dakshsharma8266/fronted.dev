@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Blog - Grid Areas</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#fff}
+  .layout{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    grid-template-rows:auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+    gap:20px;
+    padding:20px;
+    min-height:100vh;
+  }
+  header{grid-area:header;padding:12px}
+  nav{grid-area:sidebar;padding:12px;background:#f6f7fb;border-radius:8px}
+  main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  footer{grid-area:footer;padding:12px;text-align:center;background:#f6f7fb;border-radius:8px}
+  .post{background:#fff;border:1px solid #eee;padding:16px;border-radius:8px;min-height:200px;display:flex;flex-direction:column;gap:12px}
+  .sidebar-list{list-style:none;padding:0;margin:0}
+  .sidebar-list li{padding:8px 0;border-bottom:1px dashed #e6e6e6}
+  /* below 800px: sidebar moves below main */
+  @media (max-width:800px){
+    .layout{grid-template-columns:1fr;grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer"}
+    main{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+  <div class="layout">
+    <header><h1>Blog Title <small style="font-weight:400">— subtitle</small></h1></header>
+
+    <nav>
+      <h3>Categories</h3>
+      <ul class="sidebar-list">
+        <li>Design</li>
+        <li>Development</li>
+        <li>UX</li>
+        <li>News</li>
+      </ul>
+    </nav>
+
+    <main>
+      <article class="post">
+        <h2>Post One</h2>
+        <p>Intro paragraph for post one. This is a short summary and CTA to continue reading.</p>
+      </article>
+
+      <article class="post">
+        <h2>Post Two</h2>
+        <p>Intro paragraph for post two. Preview content that should sit next to post one on wider screens.</p>
+      </article>
+    </main>
+
+    <footer>Contact: email@example.com — © <span id="yr3"></span></footer>
+  </div>
+
+<script>document.getElementById('yr3').textContent = new Date().getFullYear();</script>
+</body>
+</html>
