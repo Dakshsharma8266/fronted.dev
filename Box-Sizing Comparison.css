@@ -1,0 +1,18 @@
+/* box-sizing.css */
+body{font-family:system-ui;padding:28px;background:#fafbff;color:#111}
+.wrap{max-width:1000px;margin:0 auto}
+.compare{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;margin-top:12px}
+
+/* both boxes have same width and padding but different box-sizing behaviour */
+.box{
+  width:340px;padding:24px;border:6px solid #cbd6ee;border-radius:10px;background:#fff;
+  box-shadow:0 10px 28px rgba(10,20,40,0.04);
+}
+.default{box-sizing:content-box}
+.borderbox{box-sizing:border-box;border-color:#b6e0ff}
+
+/* inner element to visualize content width */
+.inner{height:64px;background:#f0f6ff;border-radius:8px;margin-top:12px;display:flex;align-items:center;justify-content:center}
+@media (max-width:760px){
+  .compare{flex-direction:column}
+}
