@@ -1,0 +1,17 @@
+/* buttons.css */
+*{box-sizing:border-box}
+body{font-family:system-ui;padding:28px;background:#fafafa;color:#111}
+.wrap{max-width:760px;margin:0 auto}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  padding:10px 16px;border-radius:10px;border:0;cursor:pointer;
+  transition:transform .12s cubic-bezier(.2,.8,.2,1), box-shadow .12s;
+  font-weight:600;
+}
+.btn:focus{outline:3px solid rgba(33,150,243,0.15);outline-offset:3px}
+.btn:active{transform:translateY(1px)}
+.primary{background:#1976d2;color:#fff;box-shadow:0 8px 20px rgba(25,118,210,0.15)}
+.primary:hover{transform:translateY(-3px)}
+.secondary{background:#e9eef9;color:#0b2b4a}
+.outline{background:transparent;border:2px solid #cfd8e3;color:#0b2b4a}
+.disabled, .btn[disabled]{opacity:0.5; cursor:not-allowed; box-shadow:none; transform:none}
