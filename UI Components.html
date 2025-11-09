@@ -1,0 +1,40 @@
+<!-- ui-components.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>UI Components</title>
+  <link rel="stylesheet" href="ui-components.css"/>
+</head>
+<body>
+  <main class="center">
+    <div class="card">
+      <header>
+        <h1>Search</h1>
+      </header>
+
+      <div class="controls">
+        <form class="search" action="#" onsubmit="return false;">
+          <input type="search" placeholder="Search..." />
+          <button type="submit">Go</button>
+        </form>
+
+        <div class="btn-row">
+          <button class="primary">New</button>
+          <button class="secondary">Filter</button>
+        </div>
+
+        <div class="dropdown">
+          <button class="drop-toggle" aria-haspopup="true">Options ▾</button>
+          <ul class="drop-list">
+            <li><a href="#">Option A</a></li>
+            <li><a href="#">Option B</a></li>
+            <li><a href="#">Option C</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
