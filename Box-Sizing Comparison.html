@@ -1,0 +1,28 @@
+<!-- box-sizing.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="box-sizing.css"/>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Box-Sizing: Comparison</h1>
+    <p>Left: default (content-box). Right: <code>box-sizing: border-box;</code></p>
+
+    <section class="compare">
+      <div class="box default">
+        <h2>Default (content-box)</h2>
+        <div class="inner">Inner area</div>
+      </div>
+
+      <div class="box borderbox">
+        <h2>Border-box</h2>
+        <div class="inner">Inner area</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
