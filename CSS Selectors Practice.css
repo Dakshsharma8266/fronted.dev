@@ -1,0 +1,30 @@
+/* selectors.css */
+*{box-sizing:border-box}
+body{font-family:system-ui; margin:20px; color:#111}
+header h1{margin:0 0 12px 0}
+.demo{background:#fff;padding:14px;border-radius:10px;margin-bottom:12px;box-shadow:0 6px 18px rgba(10,20,40,.05)}
+
+/* element selector */
+p{color:#333}
+
+/* class selector */
+.highlight{background:linear-gradient(90deg,#fff9c4,#ffe0b2); padding:8px;border-radius:6px}
+
+/* id selector */
+#unique{font-weight:700;color:#2b6cb0}
+
+/* attribute selector */
+a[data-tip]{text-decoration:underline dotted}
+input[type="text"]:focus{outline:3px solid rgba(43,108,176,0.15);}
+
+/* child combinator (>) */
+.parent > p{border-left:4px solid #e6f0ff; padding-left:8px}
+
+/* descendant */
+.parent p{margin:8px 0}
+
+/* adjacent sibling (+) */
+.parent p + p{font-style:italic}
+
+/* general sibling (~) to highlight any later sibling with class sibling2 */
+.sibling ~ .sibling2{background:#f0f8ff;padding:6px;border-radius:6px}
