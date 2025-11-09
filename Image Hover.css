@@ -1,0 +1,10 @@
+body { text-align: center; background: #fff0f5; }
+img {
+  border: 5px solid #ff4081;
+  border-radius: 15px;
+  transition: all 0.4s;
+}
+img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff80ab;
+}
