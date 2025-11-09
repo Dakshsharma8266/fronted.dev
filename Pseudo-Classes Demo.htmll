@@ -1,0 +1,52 @@
+<!-- pseudo-classes.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pseudo-Classes Demo</title>
+  <link rel="stylesheet" href="pseudo-classes.css" />
+</head>
+<body>
+  <header>
+    <h1>Pseudo-Classes Demo</h1>
+    <p>Examples: <code>:hover</code>, <code>:focus</code>, <code>:active</code>, <code>:nth-child()</code></p>
+  </header>
+
+  <main>
+    <section class="examples">
+      <article class="box">
+        <h2>Links</h2>
+        <p><a href="#">Default link</a></p>
+        <p><a href="#" class="visited-sim">Visited-style (sim)</a></p>
+        <p><a href="#">Hover to see <code>:hover</code></a></p>
+      </article>
+
+      <article class="box">
+        <h2>Buttons</h2>
+        <div class="btn-row">
+          <button class="primary">Primary</button>
+          <button class="secondary">Secondary</button>
+          <button class="outline">Outline</button>
+        </div>
+        <p class="note">Click (active) and focus using keyboard to see states.</p>
+      </article>
+
+      <article class="box">
+        <h2>List Items (<code>:nth-child()</code>)</h2>
+        <ul class="color-list">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Short description: each example includes text explaining the pseudo-class beside it.</p>
+  </footer>
+</body>
+</html>
