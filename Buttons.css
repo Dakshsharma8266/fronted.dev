@@ -1,0 +1,17 @@
+body { text-align: center; margin-top: 50px; }
+.btn {
+  padding: 10px 20px;
+  border: none;
+  margin: 10px;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.pink { background: #ff4081; }
+.blue { background: #2196f3; }
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #999;
+}
