@@ -1,0 +1,79 @@
+/* Responsive Image Filter Gallery */
+/* Grid with auto-fit minmax as required and filters per image */
+:root{
+  --gap: 1rem;
+  --max-width: 1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, Arial, sans-serif;
+  margin:0;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:#f7f7f8;
+  color:#222;
+}
+
+header, footer{width:100%;max-width:var(--max-width);text-align:center}
+.gallery{
+  width:100%;
+  max-width:var(--max-width);
+  display:grid;
+  gap:var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items:start;
+  margin:1rem 0;
+}
+
+/* Basic figure styling */
+figure{
+  margin:0;
+  background:#fff;
+  padding:0.5rem;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.06);
+  text-align:center;
+}
+
+/* Images responsive */
+figure img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition: filter 350ms ease, transform 350ms ease;
+  /* default no transform */
+}
+
+/* Apply different filters on the six figures */
+.gallery figure:nth-child(1) img { filter: blur(3px); }
+.gallery figure:nth-child(2) img { filter: grayscale(100%); }
+.gallery figure:nth-child(3) img { filter: sepia(60%); }
+.gallery figure:nth-child(4) img { filter: brightness(60%); }
+.gallery figure:nth-child(5) img { filter: contrast(140%); }
+.gallery figure:nth-child(6) img { filter: hue-rotate(90deg); }
+
+/* On hover (and focus within for keyboard) remove filter */
+figure:hover img,
+figure:focus-within img {
+  filter: none;
+  transform: scale(1.02);
+}
+
+/* Caption below image */
+figcaption{
+  margin-top:0.5rem;
+  font-size:0.95rem;
+  color:#444;
+}
+
+/* Stack to single column below 600px */
+@media (max-width:600px){
+  .gallery{
+    grid-template-columns: 1fr;
+  }
+  body{padding:0.75rem}
+}
