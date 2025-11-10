@@ -1,0 +1,40 @@
+/* Responsive Typography example using clamp() */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  background:#fff;
+  color:#111;
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+
+.typography-demo{
+  max-width:900px;
+  text-align:center;
+}
+
+/* Clamp values as requested */
+h1{
+  margin:0 0 1rem;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height:1.05;
+}
+
+p{
+  margin:0 auto;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height:1.6;
+  max-width:60ch;
+  color:#333;
+}
+
+/* Below 700px adjust line-height and spacing */
+@media (max-width:700px){
+  body{padding:1rem}
+  h1{line-height:1.08;margin-bottom:0.75rem}
+  p{line-height:1.5; font-size: clamp(0.95rem, 2.5vw, 1.25rem)}
+}
