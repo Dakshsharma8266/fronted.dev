@@ -1,0 +1,42 @@
+/* Cards layout responsive with breakpoints */
+/* Desktop: 4 columns, Tablet <=900px: 2 columns, Mobile <=600px: 1 column */
+
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#f2f3f5;padding:1rem}
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  justify-content:space-between;
+}
+
+/* Base card style */
+.card{
+  background:#fff;
+  padding:1rem;
+  border-radius:8px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.04);
+  flex: 1 1 calc(25% - 1rem); /* 4 columns by default */
+  min-width:200px;
+  transition: background-color 250ms ease, transform 200ms ease;
+}
+
+/* Hover changes background color */
+.card:hover{
+  background:#e9f5ff;
+  transform:translateY(-4px);
+}
+
+/* Tablet: 2 columns */
+@media (max-width:900px){
+  .card{
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width:600px){
+  .card{
+    flex: 1 1 100%;
+  }
+}
