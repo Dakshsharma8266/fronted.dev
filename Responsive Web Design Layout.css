@@ -1,0 +1,77 @@
+/* Responsive Web Design Layout using Flexbox */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,Arial,sans-serif;
+  color:#222;
+  background:#fafafa;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* Header: logo left, nav right */
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 1.25rem;
+  background:#ffffff;
+  border-bottom:1px solid #e6e6e6;
+}
+
+/* Logo */
+.logo{
+  font-weight:700;
+  font-size:1.25rem;
+}
+
+/* Nav */
+.main-nav a{
+  margin-left:1rem;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+/* Main feature boxes horizontally */
+main{flex:1; padding:1.5rem;}
+.features{
+  display:flex;
+  gap:1rem;
+  justify-content:space-between;
+  align-items:stretch;
+}
+
+/* Each feature box */
+.feature{
+  flex:1;
+  background:#fff;
+  padding:1.25rem;
+  border-radius:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.04);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+  text-align:center;
+}
+
+/* Hover slightly scale up */
+.feature:hover{
+  transform:scale(1.03);
+  box-shadow:0 12px 24px rgba(0,0,0,0.08);
+}
+
+/* Footer centered */
+footer{
+  text-align:center;
+  padding:0.75rem;
+  background:transparent;
+  font-size:0.95rem;
+}
+
+/* Breakpoint: below 750px stack vertically */
+@media (max-width:750px){
+  .features{
+    flex-direction:column;
+  }
+  .main-nav{display:none} /* simple mobile behavior; nav could become hamburger in JS but JS not allowed */
+}
