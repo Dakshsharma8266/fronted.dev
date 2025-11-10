@@ -1,0 +1,45 @@
+/* Combined Responsive Web Demo */
+/* Header + grid main with three sections; sections stack under 700px */
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Arial,sans-serif;background:#fcfdff;color:#111}
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 1.25rem;
+  background:#fff;
+  border-bottom:1px solid #e9eef5;
+}
+
+/* Layout grid: three columns */
+.layout{
+  display:grid;
+  gap:1rem;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  max-width:1200px;
+  margin:1.25rem auto;
+  padding:0 1rem;
+  animation: fadeIn 600ms ease both;
+}
+
+/* Sections */
+.gallery-preview, .explain, .cheats-preview{
+  background:#fff;padding:1rem;border-radius:8px;box-shadow:0 8px 18px rgba(0,0,0,0.04)
+}
+.mini-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem}
+.mini-gallery img{width:100%;height:auto;border-radius:6px;transition:transform 250ms ease}
+.mini-gallery img:hover{transform:scale(1.02)}
+
+/* Footer */
+.site-footer{text-align:center;padding:1rem 0;color:#555}
+
+/* Fade-in animation */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}
+}
+
+/* Below 700px stack vertically */
+@media (max-width:700px){
+  .layout{grid-template-columns:1fr}
+  .mini-gallery{grid-template-columns:repeat(2,1fr)}
+}
