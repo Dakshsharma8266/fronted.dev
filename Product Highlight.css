@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #999;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.product .details {
+    display: none;
+    font-size: 14px;
+    color: #444;
+}
+
+.highlight {
+    background: yellow;
+}
+
+.fav.selected {
+    color: red;
+    font-weight: bold;
+}
+
+[data-discount="yes"] {
+    border: 2px solid green;
+}
