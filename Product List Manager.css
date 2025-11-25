@@ -1,0 +1,9 @@
+li {
+  margin: 6px 0;
+}
+button {
+  margin-left: 10px;
+}
+input.editing {
+  border: 2px solid blue;
+}
