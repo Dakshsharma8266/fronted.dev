@@ -1,0 +1,10 @@
+.dropdown { position: relative; width: 150px; }
+#options {
+  border: 1px solid gray;
+  background: white;
+  position: absolute;
+  width: 100%;
+}
+.hidden { display: none; }
+.opt { padding: 6px; cursor: pointer; }
+.opt:hover { background: lightgray; }
