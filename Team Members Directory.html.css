@@ -1,0 +1,5 @@
+.manager { margin-bottom: 15px; }
+.employee { margin-left: 20px; cursor: pointer; }
+
+.highlight { background: yellow; }
+.info-box { font-size: 12px; color: blue; }
